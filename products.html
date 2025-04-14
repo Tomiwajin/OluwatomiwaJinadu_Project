@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carpool - Products</title>
+  <link rel="stylesheet" href="project.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">Carpool</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="how-it-works.html">How it works</a></li>
+        <li><a href="about-us.html">About</a></li>
+        <li><a href="contact-us.html">Contact Us</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section with White Text on Dark Background -->
+  <section class="hero product-hero">
+    <div class="hero-content">
+      <h1>Shop Carpool Merch</h1>
+      <p>Support our rideshare community by purchasing official Carpool gear!</p>
+    </div>
+  </section>
+
+  <!-- Products List -->
+  <main class="products-section">
+    <div class="product-card">
+      <div class="product-info">
+        <h3>Carpool Shirt</h3>
+        <p class="price">$20.00</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="soapier-sheave.6j@icloud.com" />
+          <input type="hidden" name="item_name" value="Carpool Shirt" />
+          <input type="hidden" name="amount" value="20.00" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="submit" value="Buy Now" class="paypal-button" />
+        </form>
+      </div>
+    </div>
+
+    <div class="product-card">
+      <div class="product-info">
+        <h3>Carpool Mug</h3>
+        <p class="price">$10.00</p>
+        <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_blank">
+          <input type="hidden" name="cmd" value="_xclick" />
+          <input type="hidden" name="business" value="soapier-sheave.6j@icloud.com" />
+          <input type="hidden" name="item_name" value="Carpool Mug" />
+          <input type="hidden" name="amount" value="10.00" />
+          <input type="hidden" name="currency_code" value="USD" />
+          <input type="submit" value="Buy Now" class="paypal-button" />
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p style="text-align:center; padding: 20px;">&copy; 2025 Carpool</p>
+  </footer>
+</body>
+</html>
