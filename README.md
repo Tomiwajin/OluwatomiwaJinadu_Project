@@ -16,3 +16,8 @@ How It Works: Explanation of the carpooling process.
 
 Contact Us: Allows users to reach out for support.
 
+Deployment
+This project is deployed via GitHub Pages.
+
+Live Site: https://tomiwajin.github.io/OluwatomiwaJinadu_Project/
+
