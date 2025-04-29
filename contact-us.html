@@ -44,5 +44,14 @@
             <button type="submit">Submit</button>
         </form>
     </section>
-</body>
-</html>
+    <script>
+        document.querySelector("a[href='#contact-form']").addEventListener("click", function (e) {
+          e.preventDefault();
+          document.querySelector("#contact-form").scrollIntoView({ behavior: "smooth" });
+        });
+        document.querySelector("form").addEventListener("submit", function () {
+          alert("Thank you for reaching out! We will get back to you soon.");
+        });
+      </script>
+      </body>
+      </html>
