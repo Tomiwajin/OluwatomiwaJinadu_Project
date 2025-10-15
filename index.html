@@ -1,44 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carpool - Homepage</title>
-    <meta name="description" content="Join Carpool, a student-friendly rideshare platform designed for safe, affordable, and convenient commuting with your peers.">
-    <link rel="stylesheet" href="project.css">
-</head>
-<body>
+    <meta
+      name="description"
+      content="Join Carpool, a student-friendly rideshare platform designed for safe, affordable, and convenient commuting with your peers."
+    />
+    <link rel="stylesheet" href="project.css" />
+  </head>
+  <body>
     <header>
-        <div class="logo">Carpool</div>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="how-it-works.html">How it works</a></li>
-                <li><a href="about-us.html">About</a></li>
-                <li><a href="contact-us.html">Contact</a></li>
-                <li><a href="sign-up-login.html">Sign up/ Login</a></li>
-                <li><a href="products.html">Products</a></li>
-            </ul>
-        </nav>
+      <div class="logo">Carpool</div>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="how-it-works.html">How it works</a></li>
+          <li><a href="about-us.html">About</a></li>
+          <li><a href="contact-us.html">Contact</a></li>
+          <li><a href="sign-up-login.html">Sign up/ Login</a></li>
+          <li><a href="products.html">Products</a></li>
+        </ul>
+      </nav>
     </header>
 
     <section class="hero">
-        <div class="hero-content">
-            <h1>RIDE WITH CONFIDENCE,</h1>
-            <h1>ARRIVE WITH EASE</h1>
-            <p>Experience the future of transportation with our reliable rideshare service. Join a community that values safety, convenience, and affordability.</p>
-            <a href="#" class="cta-btn">Ride with Us</a>
-        </div>
+      <div class="hero-content">
+        <h1>RIDE WITH CONFIDENCE,</h1>
+        <h1>ARRIVE WITH EASE</h1>
+        <p>
+          Experience the future of transportation with our reliable rideshare
+          service. Join a community that values safety, convenience, and
+          affordability.
+        </p>
+        <a href="#" class="cta-btn">Ride with Us</a>
+      </div>
     </section>
+
     <footer>
-        <br>
-        Copyright &copy; 2020 Carpool<br>
-        <a href="mailto:oluwatomiwa@jinadu.com">oluwatomiwa@jinadu.com</a>
-        <div>
-            <script>
-                document.write("This page was last modified on: " + document.lastModified);
-            </script>
-        </div>            
+      <br />
+      Copyright &copy; 2020 Carpool<br />
+      <a href="mailto:oluwatomiwa@jinadu.com">oluwatomiwa@jinadu.com</a>
+      <div>
+        <script>
+          document.write(
+            "This page was last modified on: " + document.lastModified
+          );
+        </script>
+      </div>
     </footer>
-</body>
+
+    <script>
+      const menuToggle = document.querySelector(".menu-toggle");
+      const nav = document.querySelector("nav");
+
+      menuToggle.addEventListener("click", () => {
+        menuToggle.classList.toggle("active");
+        nav.classList.toggle("active");
+      });
+
+      // Close menu when clicking outside
+      document.addEventListener("click", (e) => {
+        if (!menuToggle.contains(e.target) && !nav.contains(e.target)) {
+          menuToggle.classList.remove("active");
+          nav.classList.remove("active");
+        }
+      });
+
+      // Close menu when clicking a link
+      const navLinks = document.querySelectorAll("nav a");
+      navLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          menuToggle.classList.remove("active");
+          nav.classList.remove("active");
+        });
+      });
+    </script>
+  </body>
 </html>
